@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="contact"
+        type="com.example.room2023.models.Contact" />
+
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dataBinding.TestActivity"
+    >
+    <TextView
+        tools:text="contact name"
+        android:text="@{contact.name}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18sdp"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/purple_200"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{contact.phone.replaceAll(` `,``) }"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/_18sdp"
+        android:padding="@dimen/_10sdp"
+        tools:text="contact phone"
+
+        />
+
+
+
+</LinearLayout>
+</layout>
